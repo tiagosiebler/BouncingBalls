@@ -1,6 +1,6 @@
-const { registerEventHandlers, handleResizeCanvasEvent } = require('./util/registerEventHandlers');
+const { handleResizeCanvasEvent } = require('./util/registerEventHandlers');
 const getCanvasTag = require('./util/getCanvasTag');
-const renderCanvasFrame = require('./util/renderCanvasFrame');
+const setupRenderer = require('./util/setupRenderer');
 
 (function() {
   // Prepare initial canvas tag
@@ -12,9 +12,6 @@ const renderCanvasFrame = require('./util/renderCanvasFrame');
   // Set initial canvas size
   handleResizeCanvasEvent(canvas);
 
-  // Prepare event listeners for click & resize events
-  registerEventHandlers(canvas);
-
-  // Begin core rendering loop
-  renderCanvasFrame(canvas, canvas.getContext('2d'));
+  // Setup core rendering loop
+  setupRenderer(canvas);
 })();
