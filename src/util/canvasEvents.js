@@ -15,12 +15,16 @@ function handleResizeCanvasEvent(canvas) {
  */
 function registerEventHandlers(canvas, handleClickEventCallback) {
   addEventListener('resize', () => handleResizeCanvasEvent(canvas));
+
   addEventListener('click', event => {
-    handleClickEventCallback && handleClickEventCallback(event.offsetX, event.clientY);
+    handleClickEventCallback && handleClickEventCallback(event.offsetX, event.offsetY);
   });
-  addEventListener('touchstart', event => {
-    handleClickEventCallback && handleClickEventCallback(event.offsetX, event.clientY);
-  });
+
+  if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+    addEventListener('touchstart', event => {
+      handleClickEventCallback && handleClickEventCallback(event.pageX, event.pageY);
+    });
+  }
 }
 
 module.exports = { registerEventHandlers, handleResizeCanvasEvent };
