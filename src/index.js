@@ -1,4 +1,4 @@
-const { handleResizeCanvasEvent } = require('./util/registerEventHandlers');
+const { handleResizeCanvasEvent } = require('./util/eventHandlers');
 const getCanvasTag = require('./util/getCanvasTag');
 const setupRenderer = require('./util/setupRenderer');
 

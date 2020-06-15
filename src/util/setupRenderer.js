@@ -2,7 +2,7 @@
 const animatedBalls = [];
 
 const getRandomNumberInRange = require('./getRandomNumberInRange');
-const { registerEventHandlers } = require('./registerEventHandlers');
+const { registerEventHandlers } = require('./eventHandlers');
 const renderBall = require('./renderBall');
 
 /**
