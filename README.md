@@ -6,7 +6,7 @@ Dynamic tag to render on-click bouncing balls on any web page
 
 Include `bouncy.min.js` on any page:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/tiagosiebler/BouncingBalls/dist/bouncy.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/tiagosiebler/BouncingBalls@1.0.1/dist/bouncy.min.js" crossorigin="anonymous"></script>
 ```
 
 Click anywhere to render bouncing balls.
