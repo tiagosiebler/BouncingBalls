@@ -33,4 +33,4 @@ The build process is managed via webpack. To run it:
 - Install dependencies: `npm i --dev`
 - Run build process: `npm run build`
 
-The optimised output can be found in the `dist` folder. Note: the default is a development build
+The optimised output can be found in the `dist` folder.
