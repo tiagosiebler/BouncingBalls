@@ -11,7 +11,7 @@ Include `bouncy.min.js` on any page:
 
 Click anywhere to render bouncing balls.
 
-Try it here
+Try it here: https://tiagosiebler.github.io/BouncingBalls/dist/circle-github.html
 
 ## Build
 
