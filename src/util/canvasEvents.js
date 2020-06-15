@@ -20,7 +20,8 @@ function registerEventHandlers(canvas, handleClickEventCallback) {
     handleClickEventCallback && handleClickEventCallback(event.offsetX, event.offsetY);
   });
 
-  if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+  // support for iOS/touch devices
+  if (typeof window.ontouchstart != 'undefined') {
     addEventListener('touchstart', event => {
       handleClickEventCallback && handleClickEventCallback(event.pageX, event.pageY);
     });
