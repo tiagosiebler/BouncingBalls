@@ -1,6 +1,5 @@
-const { handleResizeCanvasEvent } = require('./util/eventHandlers');
 const getCanvasTag = require('./util/getCanvasTag');
-const setupRenderer = require('./util/setupRenderer');
+const setupRenderer = require('./setupRenderer');
 
 (function() {
   // Prepare initial canvas tag
@@ -8,9 +7,6 @@ const setupRenderer = require('./util/setupRenderer');
 
   // Dynamically append tag to page body
   document.body.appendChild(canvas);
-
-  // Set initial canvas size
-  handleResizeCanvasEvent(canvas);
 
   // Setup core rendering loop
   setupRenderer(canvas);

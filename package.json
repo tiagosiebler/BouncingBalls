@@ -1,11 +1,11 @@
 {
   "name": "bouncyballs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "buildwatch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
