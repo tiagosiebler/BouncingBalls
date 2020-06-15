@@ -15,7 +15,9 @@ function handleResizeCanvasEvent(canvas) {
  */
 function registerEventHandlers(canvas, handleClickEventCallback) {
   addEventListener('resize', () => handleResizeCanvasEvent(canvas));
-  addEventListener("click", event => {
+  // iOS Safari doesn't respond to click events outside buttons & links, but does respond to touchstart
+  let clickEventName = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform) ? 'touchstart' : 'click';
+  addEventListener(clickEventName, event => {
     handleClickEventCallback && handleClickEventCallback(event.offsetX, event.clientY);
   });
 }
