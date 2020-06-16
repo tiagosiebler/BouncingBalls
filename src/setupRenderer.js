@@ -57,11 +57,13 @@ function handleClickEvent(canvas, positionX, positionY) {
 module.exports = function setupRenderer(canvas) {
   const ctx = canvas.getContext('2d');
 
+  // Prepare canvas background & animation frame loop
   renderCanvasFrame(canvas, ctx);
 
   // Set initial canvas size
   handleResizeCanvasEvent(canvas);
 
+  // Prepare event handlers (onclick & onresize)
   registerEventHandlers(
     canvas,
     (positionX, positionY) => handleClickEvent(canvas, positionX, positionY)
